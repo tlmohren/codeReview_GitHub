@@ -22,4 +22,8 @@ simpleSignal = 2.6 * sin(4 * 2*pi*t) +...
 
 [freq,freqAmp] = simpleFFT(simpleSignal,sampFreq,figureOn);
 % 
+[freq,freqAmp] = simpleFFT( simpleSignal'*[1,1.3,1.5] ,sampFreq,figureOn);
+
+[freq,freqAmp] = simpleFFT( (simpleSignal'*[1,1.3,1.5])' ,sampFreq,figureOn);
+
 [freq,freqAmp] = simpleFFT(simpleSignal,sampFreq,figureOn,t,simpleSignal);
